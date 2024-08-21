@@ -1,0 +1,28 @@
+{
+  "books": [
+    {
+      "title": "Homo Sapiens",
+      "id": 1
+    },
+    {
+      "title": "Super Science",
+      "id": 2
+    },
+    {
+      "title": "Planet Earth 2",
+      "id": 3
+    },
+    {
+      "title": "Dinosaurs",
+      "id": 4
+    },
+    {
+      "title": "Farming manuals",
+      "id": 5
+    },
+    {
+      "title": "Exploring Asia",
+      "id": 6
+    }
+  ]
+}
