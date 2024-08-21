@@ -3,11 +3,13 @@ import axios from 'axios';
 import BookCreate from './components/BookCreate';
 import BookList from './components/BookList';
 
+const url = 'https://reading-list-server-one.vercel.app/books';
+
 function App() {
   const [books, setBooks] = useState([]);
 
   const fetchBooks = async () => {
-    const response = await axios.get('http://localhost:3001/books');
+    const response = await axios.get(`${url}`);
 
     setBooks(response.data);
   };
@@ -17,7 +19,7 @@ function App() {
   }, []);
 
   const editBookById = async (id, newTitle) => {
-    const response = await axios.put(`http://localhost:3001/books/${id}`, {
+    const response = await axios.put(`${url}/${id}`, {
       title: newTitle,
     });
 
@@ -33,7 +35,7 @@ function App() {
   };
 
   const deleteBookById = async (id) => {
-    await axios.delete(`http://localhost:3001/books/${id}`);
+    await axios.delete(`${url}/${id}`);
 
     const updatedBooks = books.filter((book) => {
       return book.id !== id;
@@ -43,7 +45,7 @@ function App() {
   };
 
   const createBook = async (title) => {
-    const response = await axios.post('http://localhost:3001/books', {
+    const response = await axios.post(`${url}`, {
       title,
     });
 
