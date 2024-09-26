@@ -1,7 +1,7 @@
 import { createContext, useState, useCallback } from "react";
 import axios from "axios";
 
-const url = 'https://reading-list-server-one.vercel.app/books';
+const url = 'https://reading-server-ava.vercel.app/books';
 
 const BooksContext = createContext();
 
